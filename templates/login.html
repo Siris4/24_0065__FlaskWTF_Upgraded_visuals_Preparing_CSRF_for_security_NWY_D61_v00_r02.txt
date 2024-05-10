@@ -1,0 +1,19 @@
+<!-- login.html -->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Login</title>
+	</head>
+	<body>
+		<div class="jumbotron">
+        	<div class="container">
+				<h1>Login</h1>
+				<form method="POST" action="/">
+					{{ form.csrf_token }}
+					{{ form.name.label }} {{ form.name(size=30) }}
+					<input type="submit" value="Go">
+				</form>
+			</div>
+        </div>
+	</body>
+</html>

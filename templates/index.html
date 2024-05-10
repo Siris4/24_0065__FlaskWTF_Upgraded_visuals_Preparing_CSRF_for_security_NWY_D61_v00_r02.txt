@@ -1,0 +1,26 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Secrets</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Greetings Traveler</h1>
+        <p>Are you ready to discover my secret?</p>
+        <!-- Updated login button using a form -->
+        <form method="GET" action="{{ url_for('login') }}">
+          <button type="submit" class="btn btn-primary btn-lg">Login</button>
+        </form>
+        <!-- Form for name submission -->
+        <form method="POST" action="/">
+          {{ form.csrf_token }}
+		  {{ form.name.label }} {{ form.name(size=30) }}
+		  <input type="submit" value="Go">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
